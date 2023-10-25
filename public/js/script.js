@@ -6,7 +6,26 @@ var main = document.querySelector(".main"),
     home = document.querySelector(".home");
 
 
+//Animation
+let sections = document.querySelectorAll('section');
 
+window.onscroll = () => {
+    sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        
+        if(top >= offset && top < offset + height)
+        {
+            sec.classList.add('show');
+        }
+        else
+        {
+            sec.classList.remove('show');
+
+        }
+    })
+}
 
 // For navigation bar 
 
@@ -259,3 +278,25 @@ packageWrapper.addEventListener("mouseenter", () => clearTimeout(packageTimeoutI
 packageWrapper.addEventListener("mouseleave", autoPlay);
 
 
+$(document).ready(function() {
+    $('[repeat]').each(function() {
+       var toRepeat = $(this).text();
+       var times = parseInt($(this).attr('repeat'));
+       var repeated = Array(times+1).join(toRepeat);
+       $(this).text(repeated).removeAttr('repeat');
+     });
+   });//Footer
+function sendEmail(){
+
+    var params={
+    from_name : document.getElementById("name").value,
+    mail: document.getElementById("mail").value,
+    message: document.getElementById("message").value,
+   };
+
+   emailjs.send("service_ns4ekvp","template_gdvjcu8",params).then(function (res){
+    
+    alert("successfully sent!");
+   })
+   
+ }
