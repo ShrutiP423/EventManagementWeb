@@ -6,6 +6,7 @@
 - JavaScript
 - Bootstrap
 - NodeJS
+- ExpressJS
 - MongoDB
 
 Used HTML,CSS,JS and bootstrap as frontend with NodeJS backend and MongoDB as efficient Database
