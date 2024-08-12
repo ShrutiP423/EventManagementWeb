@@ -37,14 +37,14 @@
 
         </nav>
 
-       
+
     </header>
 
     <nav aria-label="breadcrumb" class="page-location">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="/venues">venues</a></li>
-            <li class="breadcrumb-item active" aria-current="page">
+            <li class="breadcrumb-item active text-white" aria-current="page">
                 <%= venue.name %>
             </li>
         </ol>
@@ -67,7 +67,7 @@
 
                             </div>
                             <div class="venue-details">
-                                <div class="photographer-details-inner" style="box-shadow: 0 0 5px gray;">
+                                <div class="photographer-details-inner">
                                     <div class="title">
                                         <h4 class="">
                                             <%= venue.name%>
@@ -98,37 +98,39 @@
                                 </div>
                                 <div class="address-container" id="address" style="margin: 2rem;">
                                     <div class="row">
-                                        <div class="col-md-2 col-sm-2"><i class="fa fa-map-marker"></i></div>
-                                            <div class="col-md-5 col-sm-5">
-                                                    <p>
-                                                        <%= venue.address%>
-                                                    </p>
-                                                </div>
-                                            
-                                            <div class="col-md-5 col-sm-5 "><iframe src="<%= venue.addressUrl%>" width="150"
-                                                    height="150" style="border:1px solid gray;" allowfullscreen=""
-                                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                            </div>
+                                        <div class="col-md-2 col-sm-2"><i class="fa fa-map-marker text-white"></i></div>
+                                        <div class="col-md-5 col-sm-5 text-white">
+                                            <p>
+                                                <%= venue.address%>
+                                            </p>
                                         </div>
+
+                                        <div class="col-md-5 col-sm-5 "><iframe src="<%= venue.addressUrl%>" width="150"
+                                                height="150" style="border:1px solid gray;" allowfullscreen=""
+                                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
                                     <hr>
                                     <div class="row">
-                                        <div class="col-md-2 col-sm-2"><i class="fa fa-phone"></i></div>
+                                        <div class="col-md-2 col-sm-2"><i class="fa fa-phone text-white"></i></div>
                                         <div class="col-md-6 col-sm-6">
                                             <p>
-                                                <a href=""><%= venue.contact%></a>
+                                                <a href="">
+                                                    <%= venue.contact%>
+                                                </a>
                                             </p>
                                         </div>
                                     </div>
                                     <hr>
                                     <div class="row">
-                                        <div class="col-md-2 col-sm-2"><i class="fa fa-instagram"></i></div>
+                                        <div class="col-md-2 col-sm-2"><i class="fa fa-instagram text-white"></i></div>
                                         <div class="col-md-6 col-sm-6"><a href="">
                                                 <%= venue.instaUrl%>
                                             </a></div>
                                     </div>
                                     <hr>
                                     <div class="row">
-                                        <div class="col-md-2 col-sm-2"><i class="fa fa-facebook"></i></div>
+                                        <div class="col-md-2 col-sm-2"><i class="fa fa-facebook text-white"></i></div>
                                         <div class="col-md-6 col-sm-6"><a href="">
                                                 <%= venue.fbUrl%>
                                             </a></div>
@@ -204,23 +206,23 @@
                                     </div>
                                 </div>
                             </div>
-</div>
+                        </div>
 
-                        <div style="box-shadow: 0 0 5px gray;" class="price-details-form fcol2 col-md-6 col-sm-12"
+                        <div  class="price-details-form fcol2 col-md-6 col-sm-12"
                             id="pricing">
                             <hr>
                             <div class="heading"
-                                style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">
+                                style="box-shadow: 0 0 5px black inset; background-color: rgba(231, 231, 231, 0.911); padding: 3px; text-align: center; margin-bottom: 10px;">
                                 <h5>Pricing Details</h5>
                             </div>
-                            <div class="right-section sc-jTzLTM dCKAkt">
+                            <div class="right-section">
                                 <div class="vendorPricing bg-white shadow-light radius margin-t-20">
 
                                     <div
                                         class="pricing-breakup padding-h-20 padding-t-10 padding-b-20 border-t bg-light-gray hidden">
                                         <%if(venue.food_price !='' ){%>
                                             <div class="f-space-between f-sb-bw h-50 padding-h-20 v-center"
-                                                style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">
+                                                style="box-shadow: 0 0 3px black inset;  padding: 3px; text-align: center; margin-bottom: 10px;">
                                                 <h5 class="h5 text-bold">Per Plate Estimate</h5>
 
                                             </div>
@@ -241,11 +243,10 @@
 
                                     </div>
                                     <%}%>
-                                        <hr>
                                         <div
                                             class="pricing-breakup padding-h-20 padding-t-10 padding-b-20 border-t bg-light-gray hidden">
                                             <div class="f-space-between f-sb-bw h-50 padding-h-20 v-center"
-                                                style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">
+                                            style="box-shadow: 0 0 3px black inset;  padding: 3px; text-align: center; margin-bottom: 10px;">
                                                 <h5 class="h5 text-bold">Prices for Halls</h5>
 
                                             </div>
@@ -265,11 +266,10 @@
                                                             <%}%>
                                             </div>
                                         </div>
-                                        <hr>
                                         <div
                                             class="pricing-breakup padding-h-20 padding-t-10 padding-b-20 border-t bg-light-gray hidden">
                                             <div class="f-space-between f-sb-bw h-50 padding-h-20 v-center"
-                                                style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">
+                                                style="box-shadow: 0 0 3px black inset;  padding: 3px; text-align: center; margin-bottom: 10px;">
                                                 <h5 class="h5 text-bold">Prices for Rooms</h5>
                                             </div>
 
@@ -290,11 +290,10 @@
                                             </div>
 
                                         </div>
-                                        <hr>
                                         <div
                                             class="pricing-breakup padding-h-20 padding-t-10 padding-b-20 border-t bg-light-gray hidden">
                                             <div class="f-space-between f-sb-bw h-50 padding-h-20 v-center"
-                                                style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">
+                                                style="box-shadow: 0 0 3px black inset;  padding: 3px; text-align: center; margin-bottom: 10px;">
                                                 <h5 class="h5 text-bold">Prices for Decor</h5>
 
                                             </div>
@@ -319,7 +318,7 @@
                                 <hr>
                                 <div class="check-availibility">
                                     <div>
-                                        <h5>Enquire</h5>
+                                        <h5 class="text-white">Enquire</h5>
                                         <div class="below"></div>
                                     </div> <br>
                                     <form action="/venues/<%= venue._id%>/enquire" method="post"
@@ -336,7 +335,7 @@
                                             <div class="col-12">
                                                 <% if(infoErrorsObj !='' ) { %>
                                                     <div class="col-12 alert alert-danger" role="alert">
-                                                        <%= infoErrorsObj[0].message  %>
+                                                        <%= infoErrorsObj[0].message %>
                                                     </div>
                                                     <% } %>
                                             </div>
@@ -370,12 +369,12 @@
                                         </div>
                                         <div class="row availability-row">
                                             <div class="col-sm-6">
-                                                <label for="start_time">Function start time</label>
+                                                <label for="start_time">Function start time:</label>
                                                 <input class="form-control" type="time" placeholder="Function date"
                                                     name="start_time" required>
                                             </div>
                                             <div class="col-sm-6">
-                                                <label for="end_time">Function end time</label>
+                                                <label for="end_time">Function end time:</label>
                                                 <input class="form-control" type="time" placeholder="Function date"
                                                     name="end_time" required>
                                             </div>
@@ -439,8 +438,8 @@
 
                         <hr>
 
-                        <div style="box-shadow: 0 0 5px gray;" id="about-section"
-                            class="AboutSection bg-white shadow-light radius protected-content jsEvent-onCopy">
+                        <div  id="about-section"
+                            class="AboutSection text-white">
                             <h2 class="title-bar"
                                 style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">
                                 About <!-- -->
@@ -450,7 +449,7 @@
                                     </span>
                             </h2>
                             <div class="about-body border-t">
-                                <div class="info padding-h-20 padding-v-20">
+                                <div class="info">
                                     <p>
                                         <%= venue.about%>
                                     </p>
@@ -545,19 +544,20 @@
                                 style="left: 0px; width: 160px;"></span>
 
                             <div class="TabViews fcol f-space-between">
-                                <div class="Portfolio "> 
-                                    <%if(venue.porfolioPhotos != ''){%>
-                                      
-                                    <div class="row">
-                                        <%venue.portfolioPhotos.forEach(photo=>{%>
-                                        <div class="col-md-3"><img id="vendor-portfolio-pic-0"
-                                                class="img-thumbnail images-thumbnail"
-                                                src="/uploads/<%= photo.url%>"
-                                                alt="portfolio-pic" loading="lazy">
+                                <div class="Portfolio ">
+                                    <%if(venue.porfolioPhotos !='' ){%>
+
+                                        <div class="row portfolio-images-row">
+                                            <%venue.portfolioPhotos.forEach(photo=>{%>
+                                                <div class="col-md-3 portfolio-images-col"><img id="vendor-portfolio-pic-0"
+                                                        class="images-thumbnail"
+                                                        src="/uploads/<%= photo.url%>" alt="portfolio-pic"
+                                                        loading="lazy">
+                                                </div>
+                                                <%})%>
+
                                         </div>
-                                        <%})%>
-                                   
-                                    </div> <%}%>
+                                        <%}%>
 
                                 </div>
                             </div>

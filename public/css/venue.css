@@ -19,13 +19,23 @@ input {
     margin-right: 5px;
 }
 
+body{
+    height: 100vh;
+    background: #000;
+    overflow-y: scroll;
+    background: linear-gradient(gray, black);
+    /* background: linear-gradient(rgb(108, 192, 248), rgb(0, 29, 82)); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 /*--------------------------Header--------------------------------------------*/
 .header {
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
-    background: #000000d5;
+    background: #363636d5;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -166,6 +176,7 @@ input {
 
 .page-location ol {
     display: flex;
+    color: white;
 }
 
 .page-location nav {
@@ -188,16 +199,19 @@ input {
 .search-input {
     height: 80%;
 }
+.search-btn{
+background: #000;
+}
 
 /*--------------------------------------------------------------------------------*/
 .venue-container {
     margin-top: 3%;
-    background: white;
+    /* background: white; */
 }
 
 .photographer-container {
     margin-top: 1%;
-    background: white;
+    /* background: white; */
 }
 
 .box1 {
@@ -468,8 +482,8 @@ input {
     z-index: 1;
     height: 7rem;
     margin-top: 1rem;
-    background: #000000;
-    box-shadow: 0 0 10px gray inset;
+    /* background: #000000; */
+    /* box-shadow: 0 0 10px gray inset; */
 }
 
 .wrapper {

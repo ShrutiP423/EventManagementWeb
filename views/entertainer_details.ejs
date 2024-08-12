@@ -44,7 +44,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="/entertainers">entertainer</a></li>
-            <li class="breadcrumb-item active" aria-current="page">
+            <li class="breadcrumb-item active text-white" aria-current="page">
                 <%= entertainer.name %>
             </li>
         </ol>
@@ -66,7 +66,7 @@
                                     <%= entertainer.name%>" class="profile-pic">
 
                             </div>
-                            <div class="photographer-details"  style="box-shadow: 0 0 5px rgb(165, 165, 165);" >
+                            <div class="photographer-details"  >
                                 <div class="photographer-details-inner">
                                     <div class="title">
                                         <h4 class="">
@@ -96,12 +96,12 @@
                                     </div>
                                 </div>
                                 <div class="address-container" id="address" style="margin: 2rem;">
-                                    <div class="row">
+                                    <div class="row text-white">
                                         <h6>Address:</h6>
                                         <div class="url row" style="display: flex; text-align: center;">
                                             <div class="col-md-6">
                                                 <div style="display: flex; text-align: center; margin-top: 3rem;"> <i
-                                                        class="fa fa-map-marker"></i>
+                                                        class="fa fa-map-marker text-white"></i>
                                                     <p>
                                                         <%= entertainer.address%>
                                                     </p>
@@ -115,9 +115,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row">
+                                    <div class="row text-white">
                                         <div class="col-md-2 col-sm-2"><i
-                                            class="fa fa-phone"></i></div>
+                                            class="fa fa-phone text-white"></i></div>
                                         <div class="col-md-6 col-sm-6">
                                             <p>
                                                 <%= entertainer.contact%>
@@ -127,7 +127,7 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-2 col-sm-2"><i
-                                            class="fa fa-instagram"></i></div>
+                                            class="fa fa-instagram text-white"></i></div>
                                         <div class="col-md-6 col-sm-6"><a href="">
                                                 <%= entertainer.instaUrl%>
                                             </a></div>
@@ -135,7 +135,7 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-2 col-sm-2"><i
-                                            class="fa fa-facebook"></i></div>
+                                            class="fa fa-facebook text-white"></i></div>
                                         <div class="col-md-6 col-sm-6"><a href="">
                                                 <%= entertainer.fbUrl%>
                                             </a></div>
@@ -172,9 +172,10 @@
                         </div>
 
 
-                        <div  style="box-shadow: 0 0 5px gray;" class="price-details-form fcol2 col-md-6 col-sm-12" id="pricing">
+                        <div class="price-details-form fcol2 col-md-6 col-sm-12" id="pricing">
                             <hr>
-                            <div class="heading" style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">
+                            <div class="heading"
+                            style="box-shadow: 0 0 5px black inset; background-color: rgba(231, 231, 231, 0.911); padding: 3px; text-align: center; margin-bottom: 10px;">
                                 <h5>Pricing Details</h5>
                             </div>
                             <div class="right-section sc-jTzLTM dCKAkt">
@@ -182,8 +183,8 @@
                                     <div class="protected-content jsEvent-onCopy">
                                         <div
                                             class="pricing-breakup padding-h-20 padding-t-10 padding-b-20 border-t bg-light-gray hidden">
-                                            <div class="f-space-between v-center"
-                                                style="background-color: rgba(175, 175, 175, 0.466); padding: 5px; text-align: center; margin-bottom: 10px;">
+                                            <div class="f-space-between f-sb-bw h-50 padding-h-20 v-center"
+                                            style="box-shadow: 0 0 3px black inset;  padding: 3px; text-align: center; margin-bottom: 10px;">
                                                 <h6 class="h6 text-bold">Prices based on Events per hour</h6>
 
                                             </div>
@@ -211,7 +212,7 @@
 
                                 <div class="check-availibility">
                                     <div>
-                                        <h5>Enquire</h5>
+                                        <h5 class="text-white">Enquire</h5>
                                         <div class="below"></div>
                                     </div> <br>
                                     <form action="/entertainers/<%= entertainer._id%>/enquire" method="post"
@@ -305,7 +306,7 @@
                             </div>
                         </div>
 
-                        <div style="box-shadow: 0 0 5px gray;" class="AboutSection bg-white shadow-light radius protected-content jsEvent-onCopy" id="about-section">
+                        <div class="AboutSection text-white" id="about-section">
                        
                             <h3 class="title-bar" style="box-shadow: 0 0 5px black inset; background-color: rgba(175, 175, 175, 0.466); padding: 3px; text-align: center; margin-bottom: 10px;">About <!-- --><%= entertainer.name%><!-- -->
                                 <span>&nbsp;<!-- --><%= entertainer.location%>                            </h3>
@@ -378,10 +379,10 @@
                                 <div class="Portfolio "> 
                                     <%if(entertainer.portfolioPhotos != ''){%>
                                       
-                                    <div class="row">
+                                    <div class="row portfolio-images-row">
                                         <%entertainer.portfolioPhotos.forEach(photo=>{%>
-                                        <div class="col-md-3"><img id="vendor-portfolio-pic-0"
-                                                class="img-thumbnail images-thumbnail"
+                                        <div class="col-md-3 portfolio-images-col"><img id="vendor-portfolio-pic-0"
+                                                class="images-thumbnail"
                                                 src="/uploads/<%= photo.url%>"
                                                 alt="portfolio-pic" loading="lazy">
                                         </div>
